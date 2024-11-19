@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="currency_converter.css">
+</head>
+<body>
+    <header>
+        <a href="../../index.html" class="back_home">Home</a>
+        <a href="#" class="home_page">Currency Converter</a>
+    </header>
+
+    <div class="parentcontainer">
+        <div class="converter-container">
+            <div class="div1">
+                <label for="from-currency">From Currency:</label>
+                <select id="from-currency">
+                    <!-- Currency options will be populated here -->
+                </select>
+
+                <label for="to-currency">To Currency:</label>
+                <select id="to-currency">
+                    <!-- Currency options will be populated here -->
+                </select>
+            </div>
+
+            <div class="div2">
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" placeholder="Enter Amount" />
+                <button onclick="convertCurrency()">Convert</button>
+            </div>
+        </div>
+
+        <div id="result">
+            <!-- Conversion result will be shown here -->
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Currency Converter</p>
+    </footer>
+
+    <script src="currency_converter.js"></script>
+</body>
+</html>
