@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .go-back-link{
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #34495e; /* Same color as the background */
+            border: none;
+            border-radius: 30px; /* Rounded corners */
+            color: #ecf0f1;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 8px 8px 15px #1c2b36, -8px -8px 15px #4c657d; /* Neumorphic effect */
+            transition: all 0.3s ease;
+        }
+
+        .go-back-link:hover {
+            background-color: #3b4a61; /* Light background on hover */
+            box-shadow: 4px 4px 10px #a3b1c6, -4px -4px 10px #4c657d; /* Inset shadow on hover */
+        }
+
+        .go-back-link:active {
+            box-shadow: inset 2px 2px 5px #1c2b36, inset -2px -2px 5px #4c657d; /* Inner shadow when clicked */
+        }
+          
+    </style>
+
+</head>
+<body>
+    <a href="../../index.html" class="go-back-link">Home</a>
+    <div class="calculator">
+        <div id="history">
+            <div id="history-title">
+                History
+                <button id="clear-history" class="clear-history-btn">Clear History</button>
+            </div>
+            <div id="history-box"></div>
+        </div>
+
+        <input type="text" id="result" disabled placeholder="0">
+
+        <!-- Mode Toggle Button (Removed for simplicity) -->
+        <!-- <button id="mode-toggle">Scientific Mode</button> -->
+
+        <div class="grid">
+            <!-- Basic Calculator Buttons -->
+            <button id="clear">C</button>
+            <button id="backspace">←</button>
+            <button id="sqrt">√</button>
+            <button id="power">x²</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>/</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>*</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>-</button>
+            <button>0</button>
+            <button>.</button>
+            <button id="equal">=</button>
+            <button id="percentage">%</button>
+            <button id="factorial">!</button>
+            <button>+</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Function to go back to the previous page in history
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
