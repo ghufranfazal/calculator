@@ -1,0 +1,160 @@
+:root {
+    --primary-color: #2c3e50;
+    --orange-color: #e67e22;
+    --orange_light: #f98722;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.back_home {
+    text-align: center;
+    width: 60px;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: var(--orange-color);
+}
+
+.home_page {
+    font-size: 2.5rem;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 10px;
+}
+
+.parentcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: 70vh;
+    width: 100%;
+}
+
+.converter-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+}
+
+.div1, .div2 {
+    width: 48%; /* Adjust width to make the layout more flexible */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.div1 label, .div2 label {
+    margin-bottom: 5px;
+}
+
+select, input {
+    width: 100%; /* Full width of the container */
+    height: 7vh;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input {
+    text-align: center;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: var(--primary-color);
+}
+
+#result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    margin: 30px auto;
+    font-size: 1.2em;
+    width: 90%;
+    height: 10vh;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 5vh 0;
+    text-align: center;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .converter-container {
+        flex-direction: column;
+    }
+
+    .div1, .div2 {
+        width: 100%; /* Take full width on smaller screens */
+    }
+
+    .div2 button {
+        width: 100%; /* Full width button for smaller screens */
+    }
+
+    #result {
+        width: 90%; /* Make result box smaller for mobile screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .home_page {
+        font-size: 1.8rem; /* Smaller font size for very small screens */
+    }
+
+    select, input, button {
+        height: 6vh; /* Adjust input sizes for small screens */
+    }
+}
