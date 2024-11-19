@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Formatter - UtiliHub</title>
+    <link rel="stylesheet" href="text_formatter.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="../../index.html" class="home-link">Home</a>
+            <p class="title">Text Formatter</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="tool-section">
+            <h2>Text Reverser</h2>
+            <textarea id="reverse-input" placeholder="Enter text to reverse"></textarea>
+            <button onclick="reverseText()" class="actionButton">Reverse</button>
+            <div class="hr"></div>
+            <div id="reverse-output"></div>
+            <button onclick="copyText('reverse-output')">Copy</button>
+            <button onclick="selectAllText('reverse-output')">Select All</button>
+        </section>
+
+        <section class="tool-section">
+            <h2>Word Frequency Counter</h2>
+            <textarea id="frequency-input" placeholder="Enter text to analyze"></textarea>
+            <button onclick="countWordFrequency()" class="actionButton">Analyze</button>
+            <div class="hr"></div>
+            <div id="frequency-output"></div>
+            <button onclick="copyText('frequency-output')">Copy</button>
+            <button onclick="selectAllText('frequency-output')">Select All</button>
+        </section>
+
+        <section class="tool-section">
+            <h2>Slug Generator</h2>
+            <textarea id="slug-input" placeholder="Enter text for slug"></textarea>
+            <button onclick="generateSlug()" class="actionButton">Generate</button>
+            <div class="hr"></div>
+            <div id="slug-output"></div>
+            <button onclick="copyText('slug-output')">Copy</button>
+            <button onclick="selectAllText('slug-output')">Select All</button>
+        </section>
+
+        <section class="tool-section">
+            <h2>Custom Styling Preview</h2>
+            <textarea id="style-input" placeholder="Enter text to style"></textarea>
+            <div class="style-controls">
+                <label><input type="checkbox" id="bold-check"> Bold</label>
+                <label><input type="checkbox" id="italic-check"> Italic</label>
+                <label><input type="checkbox" id="underline-check"> Underline</label>
+            </div>
+            <button onclick="applyStyles()" class="actionButton">Apply Styles</button>
+            <div class="hr"></div>
+            <div id="style-output"></div>
+            <button onclick="copyText('style-output')">Copy</button>
+            <button onclick="selectAllText('style-output')">Select All</button>
+        </section>
+
+        <section class="tool-section">
+            <h2>Case Converter</h2>
+            <textarea id="case-input" placeholder="Enter text to convert"></textarea>
+            <div class="case-buttons">
+                <button onclick="convertToUpperCase()" class="actionButton">UPPERCASE</button>
+                <button onclick="convertToLowerCase()" class="actionButton">lowercase</button>
+                <button onclick="convertToCapitalize()" class="actionButton">Capitalize</button>
+                <button onclick="convertToTitleCase()" class="actionButton">Title Case</button>
+            </div>
+            <div class="hr"></div>
+            <div id="case-output"></div>
+            <button onclick="copyText('case-output')">Copy</button>
+            <button onclick="selectAllText('case-output')">Select All</button>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container2">
+            <p>&copy; 2024 UtiliHub. All Rights Reserved.</p>
+            <p>Contact us at: <a href="mailto:support@utilihub.com">support@utilihub.com</a></p>
+        </div>
+    </footer>
+</body>
+<script src="text_formatter.js"></script>
+</html>
